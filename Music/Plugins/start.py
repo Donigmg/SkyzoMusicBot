@@ -40,6 +40,7 @@ pstart_markup = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton("Command", url="https://telegra.ph/Skyzo-11-10"),
+        ],
         [
             InlineKeyboardButton("Support", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton("Updates", url=f"https://t.me/{CHANNEL}"),
