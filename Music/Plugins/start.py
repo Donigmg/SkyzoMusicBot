@@ -29,12 +29,9 @@ def start_pannel():
             InlineKeyboardButton(text="Support​", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton(text="Updates", url=f"https://t.me/{CHANNEL}"),
         ],
-        [
-            InlineKeyboardButton("Command", url="https://telegra.ph/Skyzo-11-10"),
-        ],
     ]
     return (
-        "🎛 **{BOT_NAME} Is a bot that can play a song or video from the voice chats**",
+        "**{BOT_NAME} Is a bot that can play a song or video from the voice chats**",
         buttons,
     )
 
@@ -42,17 +39,14 @@ def start_pannel():
 pstart_markup = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(
-                "Add Me To Your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
-        ],
+            InlineKeyboardButton("Command", url="https://telegra.ph/Skyzo-11-10"),
         [
             InlineKeyboardButton("Support", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton("Updates", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("Cd Music", url="https://telegra.ph/Skyzo-11-10"),
-            InlineKeyboardButton("Cd Dev", url="https://telegra.ph/壊Skyzo-01-21"),
-            InlineKeyboardButton("Cd Stream", url="https://telegra.ph/sᴋʏᴢᴏ-ᴇx-12-21"),
+            InlineKeyboardButton(
+                "Add Me To Your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
     ]
 )
@@ -66,11 +60,11 @@ async def welcome(_, message: Message):
         try:
             if member.id in OWNER:
                 return await message.reply_text(
-                    f"🦸🏻‍♂️ **Owners Bot [{member.mention}] Has Joined Your Chats.**"
+                    f" **Owners Bot [{member.mention}] Has Joined Your Chats.**"
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
-                    f"**🉐 Admin Bot [{member.mention}] Just Joined Your Chats.**"
+                    f"** Admin Bot [{member.mention}] Just Joined Your Chats.**"
                 )
             if member.id == ASSID:
                 await remove_active_chat(chat_id)
@@ -80,7 +74,7 @@ async def welcome(_, message: Message):
                     f"""
 👋 **Hi, Thanks For Adding Me To The Group**
 
-🛵 **Don't Forget To Make Me Admin So Music Can Run Normally**
+💡 **Don't Forget To Make Me Admin So Music Can Run Normally**
 """,
                     reply_markup=InlineKeyboardMarkup(out[1]),
                     disable_web_page_preview=True
@@ -101,7 +95,7 @@ async def start(_, message: Message):
     out = start_pannel()
     await message.reply_text(
         f"""
-**[🚀]({BOT_IMG}) Thanks For Adding Me To {message.chat.title}.**
+**[🚀] Thanks For Adding Me To {message.chat.title}.**
 **㊙️ {BOT_NAME} Is Music Player And Video Player Bot**
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
@@ -119,11 +113,11 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**[🗣]({BOT_IMG}) Hello {rpk}! Ready Use Me?
+**[🗣] Hello {rpk}! Ready Use Me?
 
 🉐 [{BOT_NAME}](tg://user?id=2129034376) Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
 
-🧰 To Find Out All The Available Command Bots, You Can Press The Two Buttons Below, Namely Cd Music, Cd Dev And Cd Stream**
+🧰 To Find Out All The Available Command Bots, You Can Press The Two Buttons Below Namely Command.**
 
 """,
             parse_mode="markdown",
