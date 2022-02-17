@@ -163,7 +163,7 @@ async def play(_, message: Message):
             )
         if str(finxx) == "sud":
             sudoers = await get_sudoers()
-            text = "**💻 SUDO USERS FLICKS BOT**\n\n"
+            text = "**🦊 SUDO USERS MUSICGRAM BOT**\n\n"
             for count, user_id in enumerate(sudoers, 1):
                 try:
                     user = await app.get_users(user_id)
