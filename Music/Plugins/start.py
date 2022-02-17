@@ -114,11 +114,12 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**[🗣] Hello {rpk}! Ready Use Me?
-
-🉐 [{BOT_NAME}](tg://user?id=2129034376) Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
-
-🧰 To Find Out All The Available Command Bots, You Can Press The Two Buttons Below Namely Command.**
+*** Hello {} !*
+────────────────────────
+✪ I'm an anime theme bot designed to help manage your telegram group with a lot features.
+✪ Maintained by @shshtst ✨
+────────────────────────
+Hit the /help to see available command.
 
 """,
             parse_mode="markdown",
